@@ -1,11 +1,9 @@
 require "rulers"
-require "serveall"
 
 $LOAD_PATH << File.join(File.dirname(__FILE__),
-                        "..","app",
+                        "..", "app",
                         "controllers")
-require "quotes_controller"
-
+# --> No more require here! <--
 module BestQuotes
   class Application < Rulers::Application
   end
