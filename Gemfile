@@ -1,8 +1,10 @@
 source :rubygems
-gem 'rulers'
+
+gem "rulers", :path => "../rulers"
+gem 'serveall'
+
 
 group :development do
   gem 'rerun'
 
 end
-# Your gem name
