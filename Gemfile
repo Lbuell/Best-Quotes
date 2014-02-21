@@ -1,4 +1,4 @@
 source :rubygems
-gem 'rulers'
+gem "rulers", :path => "../rulers"
 gem 'serveall'
 # Your gem name
