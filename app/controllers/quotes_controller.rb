@@ -15,7 +15,7 @@ class QuotesController < Rulers::Controller
 
   def update_quote
     attrs = {
-      "id" => "1",
+      "id" => "1",#
       "submitter" => "Liam",
       "quote" => "Twas Brillig and the slithy toags",
       "attribution" => "babies"
