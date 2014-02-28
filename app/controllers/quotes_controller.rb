@@ -30,11 +30,11 @@ class QuotesController < Rulers::Controller
       FileModel.update attrs
       quotes = FileModel.all
       render :index, :quotes => quotes
-    end
+  end
 
   def a_quote
       render :a_quote, :noun => :winking
-    end
+  end
 
   def quote_1
       quote_1 = Rulers::Model::FileModel.find(1)
