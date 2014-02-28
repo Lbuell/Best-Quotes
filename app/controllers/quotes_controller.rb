@@ -13,24 +13,31 @@ class QuotesController < Rulers::Controller
     render :quote, :obj => m
   end
 
+  def show # change the last line
+    quote = FileModel.find(params["id"])
+    ua = request.user_agent
+    render_response :quote, :obj => quote,
+      :ua => ua
+  end
+
   def update_quote
-    attrs = {
-      "id" => "1",
-      "submitter" => "Liam",
-      "quote" => "Twas Brillig and the slithy toags",
-      "attribution" => "babies"
-    }
-    FileModel.update attrs
-    quotes = FileModel.all
-    render :index, :quotes => quotes
+      attrs = {
+        "id" => "1",
+        "submitter" => "Liam",
+        "quote" => "Twas Brillig and the slithy toags",
+        "attribution" => "babies"
+      }
+      FileModel.update attrs
+      quotes = FileModel.all
+      render :index, :quotes => quotes
   end
 
   def a_quote
-    render :a_quote, :noun => :winking
+      render :a_quote, :noun => :winking
   end
 
   def quote_1
-    quote_1 = Rulers::Model::FileModel.find(1)
-    render :quote, :obj => quote_1
-  end
+      quote_1 = Rulers::Model::FileModel.find(1)
+      render :quote, :obj => quote_1
+    end
 end
